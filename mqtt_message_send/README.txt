@@ -1,4 +1,6 @@
-1. pub.py 位於你邊緣運算裝置上，和存放人流工作紀錄檔案同一個資料夾。
+1. pub.py 位於你邊緣運算裝置上，和存放人流工作紀錄檔同一個資料夾。
+他會讀取紀錄檔中的最後一行資料，並將資訊用 mqtt 傳給 mqtt broker。
+(cfi-000_log.csv是範例檔案)
 
 linux crontab setup:
 0 * * * * python3 絕對路徑/pub.py

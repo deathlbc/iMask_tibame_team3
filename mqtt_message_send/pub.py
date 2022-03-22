@@ -23,9 +23,9 @@ YOUR_BROKER = 'Broker IP'  # the public of your VM
 topic = 'Your_Topic'  # subscribe topic
 filename = f"{aiotno}_log.csv"  # your file name with "ABSOLUTE PATH" if you need linux crontab
 
-df = pd.read_csv(filename)  # 讀取log.csv檔
-final_row_list = df.tail(1).values.tolist()[0]  # 取得最後一筆資料，並將最後一筆資料轉成list
-final_row_list_str = [str(int) for int in final_row_list]  # 將數值都變成字串
+df = pd.read_csv(filename)  # read log.csv
+final_row_list = df.tail(1).values.tolist()[0]  # get tail data of log file, and turn them into list
+final_row_list_str = [str(int) for int in final_row_list]  # turn int into str
 print(final_row_list_str)
 
 # send message
