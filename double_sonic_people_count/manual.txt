@@ -1,0 +1,21 @@
+(一)double_sonic_count_modoule.py
+參數使用方法：
+機器編號：--aiotno, -no
+感測距離(cm)：--detect_range, -dr
+發射音波時間間隔：--t_count, -tc
+初始化進入人數：--people_in, -cpin
+初始化離開人數：--people_out, -cpout
+計數後空檔：--t_count_sleep, -tcs
+是否顯示距離：--show_range_print, -srp (預設yes，你可以改no)
+
+(二)pub_test.py
+機器編號：--aiotno, '-no'
+
+(三)硬體腳位設定
+蜂鳴器：12
+內機：16、18
+外機：22、24
+
+(四)pub_test.py內若要利用crontab讀檔案，
+檔案路徑需要用絕對路徑。
+
