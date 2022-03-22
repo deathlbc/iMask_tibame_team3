@@ -1,0 +1,29 @@
+實現從MySQL抓資料，並透過python送到google drive 自動化。
+
+步驟：
+(1)建立憑證
+https://learn.markteaching.com/google-drive-api-%e6%95%99%e5%ad%b8-oauth-2-0-%e6%86%91%e8%ad%89/#%E5%BB%BA%E7%AB%8B_Google_Drive_API_%E6%86%91%E8%AD%89
+
+
+(2)檔案上傳：
+https://learn.markteaching.com/%E3%80%90google-api-%E6%95%99%E5%AD%B8%E3%80%91google-drive-api-upload-%E4%BD%BF%E7%94%A8-python-%E4%B8%8A%E5%82%B3%E5%88%B0%E6%8C%87%E5%AE%9A%E8%B3%87%E6%96%99%E5%A4%BE-%E6%95%99%E5%AD%B8/#%E4%B8%8A%E5%82%B3%E6%AA%94%E6%A1%88%E5%88%B0Google_Drive_%E6%8C%87%E5%AE%9A%E8%B3%87%E6%96%99%E5%A4%BE%E7%A8%8B%E5%BC%8F%E7%A2%BC_%E8%AA%AA%E6%98%8E
+
+gdrive_uploader最後一行，
+is_update_file_function：要不要執行上傳檔案的功能？(預設為True)
+update_drive_service_folder_name：要存放的雲端資料夾名稱。若有多個相同名稱的資料夾話，ex.你的雲端有多個”TestAPI”，則是都會丟到你的全部等於TestAPI的資料夾
+update_drive_service_name：要上傳上去的檔名，ex. "aaa.txt"
+update_file_path：如果是放在同一個目錄要上傳，就不需要修改程式碼
+
+=======================================================================================
+Error可能1：
+(程式碼)如果no module named google，或如果no module named oauth2client，
+在pycharm裡面下載，然後直接在pycharm執行。
+
+
+Error可能2：
+注意！如果你兩隻程式在同一個資料夾跑，
+若先跑了quickstart.py，會在資料夾中產生一個token.json，
+
+這會導致你沒辦法接著跑程式2來上傳檔案。
+
+若發生此Error：KeyError: '_module' error，請更改你資料夾中，現存的token.json檔名，方能解決此問題。
