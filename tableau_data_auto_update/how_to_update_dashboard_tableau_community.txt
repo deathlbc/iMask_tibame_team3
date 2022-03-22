@@ -1,0 +1,11 @@
+步驟：
+
+獲得資料、並自動化更新本機資料
+    1. 透過python，從資料庫爬取製作人流圖表的必要資料(database2csv檔名pamysql.py)
+    2. 透過google api，將csv檔上傳(python2googledrive)
+    3. 以上可以透過架設虛擬機，以linux crontab排程進行自動化。
+
+資料視覺化及自動化更新儀錶板
+    1. 新增資料來源，資料來源選擇你存在google drive的檔案。
+    2. Tableau community製作儀錶板，並儲存到tableau public。
+    3. 勾選 "保持我的資料與資料來源保持同步，並內嵌我的憑證"。
