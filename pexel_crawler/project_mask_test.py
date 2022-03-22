@@ -5,9 +5,9 @@ import os
 import time
 
 
-driver = Chrome(executable_path='./chromedriver')                   # 根據柏辰提供的https://segmentfault.com/a/1190000040450510
+driver = Chrome(executable_path='./chromedriver')                   # https://segmentfault.com/a/1190000040450510
 # set webdriver => undefined or false
-driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {   # 所記載的隱藏Selenium 黑科技寫法，讓Pexel防Selenium可以被破解
+driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
     "source": """
        Object.defineProperty(navigator, 'webdriver', {
          get: () => undefined
