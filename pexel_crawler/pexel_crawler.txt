@@ -1,0 +1,9 @@
+一般在使用 google chrome 時，執行 window.navigator.webdriver 會是 False；
+使用 selenium時， window.navigator.webdriver 會是True，
+許多網站會藉由上一行的步驟，
+判斷網站的訪問者是否為selenium。
+
+因此，在我們程式碼中加入官方文件中的程式碼，
+將 window.navigator.webdriver 隱藏，
+即能夠正常爬取 pexels 圖片。
+來源：https://juejin.cn/post/6844904095749242887
