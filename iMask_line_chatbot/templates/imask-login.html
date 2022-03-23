@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iMask Login</title>
+</head>
+<center><body>
+<div id="linkweb">
+</div>
+<script>setInterval("linkweb.innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);
+</script>
+
+<h1 style="background-color:rgb(0, 0, 0);"></h1style><em>iMask-Login</em></h1>
+<marquee><h4>請輸入您的帳號密碼</h4></marquee>
+<form method="post" action="/login">
+    <label for="ACCOUNT">帳號:</label>
+        <input type="text" id="ACCOUNT" name="ACCOUNT"><br><br>
+    <label for="PASSW">密碼:</label>
+        <input type="password" id="PASSW" name="PASSW"><br><br>
+        <button type="submit" >登入</button>
+        
+</form>
+</body></center>
+</html>
+<style>
+    body {background-color: rgb(255, 255, 255);}
+    h1 {color: rgb(255, 255, 255);}
+    h2 {color: rgb(0, 0, 0);}
+  </style>
+
